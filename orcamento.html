@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Orçamento - Lopes da Silva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+
+            <div class="logo">
+                <img src="assets/logo1.jpeg" alt="Lopes da Silva">
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+
+                    <li class="dropdown">
+                        <a href="servicos.html" id="servicosHost">Serviços ▾</a>
+
+                        <ul class="dropdown-menu" id="servicosMenu">
+
+                            <li><a href="servicos.html#domesticas">Limpezas Domésticas</a></li>
+                            <li><a href="servicos.html#escritorios">Limpeza de Escritórios</a></li>
+
+                            <li class="has-submenu">
+                                <a href="servicos.html#alojamentos">Limpeza de Alojamentos</a>
+
+                                <ul class="submenu">
+                                    <li><a href="servicos.html#alojamentos">Alojamento Local</a></li>
+                                    <li><a href="servicos.html#alojamentos">Guest House</a></li>
+                                    <li><a href="servicos.html#alojamentos">Turismo Rural</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="servicos.html#pos-obra">Limpezas Pós-Obra</a></li>
+                            <li><a href="servicos.html#restauracao">Limpeza de Restauração</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-contact">
+                <a href="orcamento.html" class="btn-primary">Pedir Orçamento</a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="orcamento">
+        <div class="orcamento-overlay"></div>
+
+        <div class="orcamento-container">
+
+            <form class="form-orcamento">
+
+                <h2>PEÇA O SEU ORÇAMENTO</h2>
+
+                <div class="form-group">
+                    <input type="text" required>
+                    <label>Nome *</label>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" required>
+                        <label>Contacto *</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" required>
+                        <label>Email *</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" required>
+                        <label>Distrito *</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text">
+                        <label>Concelho</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected></option>
+                        <option>Limpezas Domésticas</option>
+                        <option>Limpeza de Escritórios</option>
+                        <option>Limpeza de Alojamento Local</option>
+                        <option>Limpeza de Guest House</option>
+                        <option>Limpeza de Turismo Rural</option>
+                        <option>Limpeza Pós-Obra</option>
+                        <option>Limpeza de Restauração</option>
+                    </select>
+                    <label>Tipo de Serviço *</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea required></textarea>
+                    <label>Esclareça as suas necessidades</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" required>
+                    <span>Li e aceito a Política de Privacidade</span>
+                </div>
+
+                <button type="submit" class="btn-enviar">Pedir Orçamento</button>
+
+            </form>
+
+        </div>
+    </section>
+
+</body>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>CONTACTOS</h3>
+
+            <div class="contact-text">
+                <h4>Email</h4>
+                <p>limpezaslsilva@gmail.com</p>
+            </div>
+
+            <div class="contact-text">
+                <h4>Telemóvel</h4>
+                <p>+351 963 457 815</p>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/limpezas_lopes_da_silva/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>Lopes da Silva © 2026. Todos os Direitos Reservados</p>
+        <p>Desenvolvido por <strong>João Doroteia</strong></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</footer>
+
+</html>

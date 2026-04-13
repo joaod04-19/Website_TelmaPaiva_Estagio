@@ -1,0 +1,1061 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+/* ===============================================
+   BARRA DE NAVEGAÇÃO NO TOPO - TODAS AS PÁGINAS
+================================================== */
+
+/* HEADER */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LAYOUT */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+.logo img {
+  height: 70px;
+}
+
+/* MENU */
+.nav>ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav ul li {
+  position: relative;
+  display: block;
+}
+
+.nav a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #4aa392;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  min-width: 220px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.2s;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 10px;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* SUBMENU */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  min-width: 180px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.has-submenu:hover .submenu {
+  display: flex;
+}
+
+.submenu li {
+  width: 100%;
+}
+
+.has-submenu>a {
+  display: block;
+  padding: 8px 10px;
+  font-weight: 600;
+  color: black;
+}
+
+.has-submenu>a:hover {
+  color: #4aa392;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 10px;
+  color: black;
+}
+
+.submenu a:hover {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* CONTACTO */
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* BOTÕES */
+.btn-primary {
+  background: #4aa392;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #4aa392;
+}
+
+.btn-secondary {
+  background: white;
+  color: #4aa392;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #f1f1f1;
+}
+
+/* ===========================
+   RODAPÉ - TODAS AS PÁGINAS
+============================== */
+
+.site-footer {
+  background: #4aa392;
+  color: #fff;
+  padding-top: 70px;
+}
+
+/* CONTAINER PRINCIPAL */
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 30px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* COLUNAS */
+.footer-col h3 {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ICONES REDES SOCIAIS */
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-socials i {
+  font-size: 30px;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-socials i:hover {
+  color: #f1f1f1;
+  transform: scale(1.1);
+}
+
+/* PARTE DE BAIXO */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background: #4aa392;
+  color: white;
+  font-size: 1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+}
+
+/* =================
+   HOME PAGE - HERO
+==================== */
+
+/* HERO SECTION */
+.hero {
+  padding: 80px 0;
+  background: #4aa392;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* TEXTO */
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* BOTÕES */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* IMAGEM */
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+/* =================
+    PEDIR ORÇAMENTO 
+==================== */
+/* ===========================
+   SECÇÃO ORÇAMENTO
+============================== */
+.orcamento {
+  position: relative;
+  background: url("assets/equipa.jpg") center/cover no-repeat;
+  padding: 120px 20px;
+}
+
+/* overlay escuro */
+.orcamento-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+/* container */
+.orcamento-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* FORM */
+.form-orcamento {
+  background: #4aa392;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  color: white;
+  animation: fadeUp 1s ease;
+}
+
+/* título */
+.form-orcamento h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* layout 2 colunas */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* grupo */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.form-group select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  padding: 10px 5px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  appearance: none;
+}
+
+/* remover fundo branco estranho */
+.form-group select option {
+  color: black;
+}
+
+/* animação label */
+.form-group select:focus + label,
+.form-group select:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: white;
+}
+
+/* inputs */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  padding: 10px 5px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+/* textarea */
+.form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* labels */
+.form-group label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* animação ao focar */
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -10px;
+  font-size: 12px;
+  color: white;
+}
+
+/* linha ativa */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: 2px solid white;
+}
+
+/* checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* botão */
+.btn-enviar {
+  width: 100%;
+  padding: 15px;
+  background: white;
+  color: #4aa392;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* hover botão */
+.btn-enviar:hover {
+  background: #e6e6e6;
+  transform: scale(1.03);
+}
+
+/* animação entrada */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-orcamento {
+    padding: 30px;
+  }
+}
+
+
+/* =========================================================
+   SERVIÇOS - SECÇÃO DE SERVIÇOS & CARDS - PÁGINA PRINCIPAL
+============================================================ */
+
+.services {
+  padding: 80px 0;
+  color: #4aa392;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #4aa392;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARDS */
+.service-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card p {
+  padding: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ===============================
+   TESTEMUNHOS - PÁGINA PRINCIPAL
+================================== */
+
+.testemunhos {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.testemunhos h2 {
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  color: #4aa392;
+}
+
+.testemunhos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.testemunho-card {
+  background: #F8F8FF;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.testemunho-card:hover {
+  transform: translateY(-5px);
+}
+
+.testemunho-card .texto {
+  font-style: italic;
+  margin: 15px 0;
+  color: black;
+}
+
+.testemunho-card .autor {
+  font-weight: 600;
+  color: #4aa392;
+  font-size: 0.9rem;
+}
+
+.estrelas {
+  color: #f5b301;
+  font-size: 1.2rem;
+}
+
+/* ====================
+   PÁGINA - SOBRE NÓS
+======================= */
+
+/* HERO DAS PÁGINAS */
+.page-hero {
+  background: #4aa392;
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* SOBRE */
+.sobre {
+  padding: 80px 0;
+}
+
+.sobre-grid {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  justify-content: space-between;
+}
+
+.sobre-texto {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.sobre-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 32px;
+  color: #4aa392;
+}
+
+.sobre-texto p {
+  margin-bottom: 32px;
+}
+
+.sobre-img {
+  flex: 1;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+}
+
+/* VALORES */
+.valores {
+  background: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.valores h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #4aa392;
+}
+
+.valor {
+  background: #F8F8FF;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.valor:hover {
+  transform: translateY(-8px);
+}
+
+.valor i {
+  font-size: 30px;
+  color: #4aa392;
+  margin-bottom: 15px;
+}
+
+.valores-desc {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #333;
+}
+
+/* VANTAGENS */
+.vantagens {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.vantagens h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #4aa392;
+}
+
+.vantagens ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.vantagens li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* ===================
+   PÁGINA - SERVIÇOS
+====================== */
+
+/* HERO DAS PÁGINAS */
+section {
+  scroll-margin-top: 120px;
+}
+
+/* SECÇÕES DE SERVIÇOS */
+.servico {
+  padding: 80px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.servico-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* GRID */
+.servico-grid {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  justify-content: space-between;
+}
+
+/* TEXTO */
+.servico-texto {
+  flex: 1;
+  max-width: 500px;
+}
+
+.servico-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #4aa392;
+}
+
+.servico-texto p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* LISTA */
+.servico-texto ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.servico-texto li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+  color: #333;
+}
+
+/* CHECK VERDE */
+.servico-texto li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #4aa392;
+  font-weight: bold;
+}
+
+/* BOTÃO (PEDIR ORÇAMENTO) NO BODY DE SERVIÇOS */
+.servico-texto .btn-primary {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* IMAGEM DOS SERVIÇOS */
+.servico-img {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.servico-img img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.5s;
+}
+
+.servico-img:hover img {
+  transform: scale(1.05);
+}
+
+/* ALTERNAR LAYOUT PARA SERVIÇOS DIREITA E ESQUERDA */
+.servico:nth-child(even) .servico-container {
+  flex-direction: row-reverse;
+}
+
+.servico:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* CTA - SERVIÇOS */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+
+  opacity: 0;
+  transform: translateY(20px);
+  /* 👈 FALTAVA ISTO */
+  transition: 0.4s;
+}
+
+.servico-img:hover .cta-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta-overlay p {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* ANIMAÇÃO DE APARECER AO SCROLL */
+.animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animation.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ==================================
+   PÁGINA PRINCIPAL - ANTES E DEPOIS
+===================================== */
+
+/* SECTION */
+.antes-depois {
+  padding: 80px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.antes-depois h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #4aa392;
+}
+
+.antes-depois p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* CAROUSEL */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+/* BOTÕES */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: -20px;
+}
+
+.carousel-btn.next {
+  right: -20px;
+}
+
+/* CARD */
+.before-after {
+  position: relative;
+  width: 350px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* IMAGENS */
+.before-after img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  clip-path: inset(0 0 0 50%);
+}
+
+.img-before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* LINHA */
+.slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+  cursor: ew-resize;
+  z-index: 4;
+}
+
+/* LABELS */
+.label {
+  position: absolute;
+  top: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  border-radius: 5px;
+  z-index: 5; /* 🔥 MUITO IMPORTANTE */
+}
+
+.antes {
+  left: 10px;
+  background: #4aa392;
+  color: white;
+}
+
+.depois {
+  right: 10px;
+  background: white;
+  color: #4aa392;
+}
