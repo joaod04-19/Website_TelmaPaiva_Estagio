@@ -11,42 +11,59 @@
 
 <body>
 
-    <header class="header">
-        <div class="container header-container">
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-            <div class="logo">
+    <header class="header">
+
+        <div class="container">
+
+            <div class="header-logo">
                 <img src="assets/logo1.jpeg" alt="Lopes da Silva">
             </div>
 
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
+            <nav class="header-nav">
 
-                    <li class="dropdown">
-                        <a href="servicos.html" id="servicosHost">Serviços ▾</a>
+                <ul class="nav-menu">
 
-                        <ul class="dropdown-menu" id="servicosMenu">
+                    <li class="nav-item"><a href="index.html">Início</a></li>
 
-                            <li><a href="servicos.html#domesticas">Limpezas Domésticas</a></li>
-                            <li><a href="servicos.html#escritorios">Limpeza de Escritórios</a></li>
+                    <li class="nav-item"><a href="sobre.html">Sobre Nós</a></li>
 
-                            <li class="has-submenu">
-                                <a href="servicos.html#alojamentos">Limpeza de Alojamentos</a>
+                    <li class="nav-item nav-dropdown">
 
-                                <ul class="submenu">
-                                    <li><a href="servicos.html#alojamentos">Alojamento Local</a></li>
-                                    <li><a href="servicos.html#alojamentos">Guest House</a></li>
-                                    <li><a href="servicos.html#alojamentos">Turismo Rural</a></li>
+                        <a href="servicos.html">Serviços <i class="fa-solid fa-chevron-down"></i></a>
+
+                        <ul class="nav-dropdown-menu">
+
+                            <li><a href="servicos.html#domestic">Limpezas Domésticas</a></li>
+
+                            <li><a href="servicos.html#offices">Limpeza de Escritórios</a></li>
+
+                            <li class="nav-submenu-item">
+
+                                <a href="servicos.html#accommodations">Limpeza de Alojamentos</a>
+
+                                <ul class="nav-submenu">
+
+                                    <li><a href="servicos.html#accommodations">Alojamento Local</a></li>
+                                    <li><a href="servicos.html#accommodations">Guest House</a></li>
+                                    <li><a href="servicos.html#accommodations">Turismo Rural</a></li>
+
                                 </ul>
+
                             </li>
 
-                            <li><a href="servicos.html#pos-obra">Limpezas Pós-Obra</a></li>
-                            <li><a href="servicos.html#restauracao">Limpeza de Restauração</a></li>
+                            <li><a href="servicos.html#post-construction">Limpezas Pós-Obra</a></li>
+
+                            <li><a href="servicos.html#restoration">Limpeza de Restauração</a></li>
 
                         </ul>
+
                     </li>
+
                 </ul>
+
             </nav>
 
             <div class="header-contact">
@@ -54,16 +71,21 @@
             </div>
 
         </div>
+
     </header>
 
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
     <section class="hero">
-        <div class="container hero-container">
+
+        <div class="container">
 
             <div class="hero-text">
 
-                <h1>SERVIÇOS PROFISSIONAIS DE LIMPEZA</h1>
+                <h1>LOPES DA SILVA - SERVIÇOS PROFISSIONAIS DE LIMPEZA</h1>
 
-                <p><strong>DESCANSE, ELES LIMPAM.</strong></p>
+                <p><strong>DESCANSA, ELES LIMPAM.</strong></p>
                 <p>
                     Priorize o seu tempo de qualidade e entregue a sua limpeza nas mãos de uma equipa de profissionais
                     qualificados.
@@ -71,114 +93,158 @@
 
             </div>
 
-            <div class="hero-image">
-                <img src="assets/equipa.jpg" alt="Serviços profissionais de limpeza">
-            </div>
-
         </div>
+
     </section>
 
-    <section class="services">
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section class="home-services">
+
         <div class="container">
 
-            <h2 class="services-title">
-                NOSSOS SERVIÇOS
-            </h2>
+            <h2 class="services-title">SERVIÇOS</h2>
 
             <div class="services-grid">
 
-                <div href="servicos.html#domesticas" class="service-card">
+                <!-- ============================================================================== -->
+                <!-- CARD 1 -->
+                <div class="service-card">
                     <img src="assets/limpeza.jpg">
-                    <p>LIMPEZAS DOMÉSTICAS</p>
+                    <p>Limpezas Domésticas</p>
                 </div>
 
-                <div href="servicos.html#escritorios" class="service-card">
+                <!-- ============================================================================== -->
+                <!-- CARD 2 -->
+                <div class="service-card">
                     <img src="assets/limpeza2.jpg">
-                    <p>LIMPEZA DE ESCRITÓRIOS</p>
+                    <p>Limpeza de Escritórios</p>
                 </div>
 
-                <div href="servicos.html#alojamentos" class="service-card">
+                <!-- ============================================================================== -->
+                <!-- CARD 3 -->
+                <div class="service-card">
                     <img src="assets/limpeza4.jpg">
-                    <p>LIMPEZA DE ALOJAMENTOS</p>
+                    <p>Limpeza de Alojamentos</p>
                 </div>
 
-                <div href="servicos.html#pos-obra" class="service-card">
+                <!-- ============================================================================== -->
+                <!-- CARD 4 -->
+                <div class="service-card">
                     <img src="assets/limpeza3.jpg">
-                    <p>LIMPEZA PÓS-OBRA</p>
+                    <p>Limpeza Pós-Obra</p>
                 </div>
 
-                <div href="servicos.html#restauracao" class="service-card">
+                <!-- ============================================================================== -->
+                <!-- CARD 5 -->
+                <div class="service-card">
                     <img src="assets/telmaPaiva.jpg">
-                    <p>LIMPEZA DE RESTAURAÇÃO</p>
+                    <p>Limpeza de Restauração</p>
                 </div>
 
             </div>
 
-            <div class="services-cta">
+            <div class="services-btn">
                 <a href="servicos.html" class="btn-primary">Ver Todos os Serviços</a>
             </div>
 
         </div>
+
     </section>
 
-    <section class="antes-depois">
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <section class="before-after">
+
         <div class="container">
 
             <h2>ANTES E DEPOIS</h2>
             <p>Aqui é possível ver a qualidade dos nossos serviços já finalizados.</p>
 
-            <div class="carousel">
+            <div class="before-after-carousel">
 
                 <button class="carousel-btn prev">&#10094;</button>
 
-                <div class="carousel-track">
+                <div class="before-after-track">
 
+                    <!-- ============================================================================== -->
                     <!-- CARD 1 -->
-                    <div class="before-after">
-                        <img src="assets/antes1.jpeg" class="img-before">
-                        <img src="assets/depois1.jpeg" class="img-after">
+                    <div class="before-after-card">
+                        <img src="assets/antes1.jpeg" class="image-before">
+                        <img src="assets/depois1.jpeg" class="image-after">
 
                         <div class="slider-line"></div>
                         <div class="slider-handle"></div>
 
-                        <span class="label antes">ANTES</span>
-                        <span class="label depois">DEPOIS</span>
+                        <span class="label-before">ANTES</span>
+                        <span class="label-after">DEPOIS</span>
                     </div>
 
+                    <!-- ============================================================================== -->
                     <!-- CARD 2 -->
-                    <div class="before-after">
-                        <img src="assets/antes2.jpeg" class="img-before">
-                        <img src="assets/depois2.jpeg" class="img-after">
+                    <div class="before-after-card">
+                        <img src="assets/antes2.jpeg" class="image-before">
+                        <img src="assets/depois2.jpeg" class="image-after">
 
                         <div class="slider-line"></div>
                         <div class="slider-handle"></div>
 
-                        <span class="label antes">ANTES</span>
-                        <span class="label depois">DEPOIS</span>
+                        <span class="label-before">ANTES</span>
+                        <span class="label-after">DEPOIS</span>
                     </div>
 
+                    <!-- ============================================================================== -->
                     <!-- CARD 3 -->
-                    <div class="before-after">
-                        <img src="assets/antes3.jpeg" class="img-before">
-                        <img src="assets/depois3.jpeg" class="img-after">
+                    <div class="before-after-card">
+                        <img src="assets/antes3.jpeg" class="image-before">
+                        <img src="assets/depois3.jpeg" class="image-after">
 
                         <div class="slider-line"></div>
                         <div class="slider-handle"></div>
 
-                        <span class="label antes">ANTES</span>
-                        <span class="label depois">DEPOIS</span>
+                        <span class="label-before">ANTES</span>
+                        <span class="label-after">DEPOIS</span>
                     </div>
 
-                    <!-- CARD 4 (vai entrar no loop) -->
-                    <div class="before-after">
-                        <img src="assets/antes4.jpeg" class="img-before">
-                        <img src="assets/depois4.jpeg" class="img-after">
+                    <!-- ============================================================================== -->
+                    <!-- CARD 4 -->
+                    <div class="before-after-card">
+                        <img src="assets/antes4.jpeg" class="image-before">
+                        <img src="assets/depois4.jpeg" class="image-after">
 
                         <div class="slider-line"></div>
                         <div class="slider-handle"></div>
 
-                        <span class="label antes">ANTES</span>
-                        <span class="label depois">DEPOIS</span>
+                        <span class="label-before">ANTES</span>
+                        <span class="label-after">DEPOIS</span>
+                    </div>
+
+                    <!-- ============================================================================== -->
+                    <!-- CARD 5 -->
+                    <div class="before-after-card">
+                        <img src="assets/antes4.jpeg" class="image-before">
+                        <img src="assets/depois4.jpeg" class="image-after">
+
+                        <div class="slider-line"></div>
+                        <div class="slider-handle"></div>
+
+                        <span class="label-before">ANTES</span>
+                        <span class="label-after">DEPOIS</span>
+                    </div>
+
+                    <!-- ============================================================================== -->
+                    <!-- CARD 6 -->
+                    <div class="before-after-card">
+                        <img src="assets/antes4.jpeg" class="image-before">
+                        <img src="assets/depois4.jpeg" class="image-after">
+
+                        <div class="slider-line"></div>
+                        <div class="slider-handle"></div>
+
+                        <span class="label-before">ANTES</span>
+                        <span class="label-after">DEPOIS</span>
                     </div>
 
                 </div>
@@ -188,84 +254,139 @@
             </div>
 
         </div>
+
     </section>
 
-    <section class="testemunhos">
-        <h2>O QUE DIZEM OS NOSSOS CLIENTES?</h2>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-        <div class="testemunhos-grid">
-            <div class="testemunho-card">
-                <div class="estrelas">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+    <section class="testimonials">
+
+        <div class="container">
+
+            <h2>O QUE DIZEM OS NOSSOS CLIENTES?</h2>
+
+            <div class="testimonials-grid">
+
+                <!-- ============================================================================== -->
+                <!-- CARD 1 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="testimonial-text">“Atendimento rápido e muito profissional. Recomendo.”</p>
+                    <span class="testimonial-author">Inês Fernandes</span>
+
                 </div>
-                <p class="texto">“Atendimento rápido e muito profissional. Recomendo.”</p>
-                <span class="autor">— João</span>
+
+                <!-- ============================================================================== -->
+                <!-- CARD 2 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="testimonial-text">“Atendimento rápido e muito profissional. Recomendo.”</p>
+                    <span class="testimonial-author">Sara Correia</span>
+
+                </div>
+
+                <!-- ============================================================================== -->
+                <!-- CARD 3 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="testimonial-text">“Atendimento rápido e muito profissional. Recomendo.”</p>
+                    <span class="testimonial-author">Ana Catarina</span>
+
+                </div>
+
+                <!-- ============================================================================== -->
+                <!-- CARD 4 -->
+                <div class="testimonial-card">
+
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+
+                    <p class="testimonial-text">“Atendimento rápido e muito profissional. Recomendo.”</p>
+                    <span class="testimonial-author">Diogo Rafael</span>
+
+                </div>
+
             </div>
 
-            <div class="testemunho-card">
-                <div class="estrelas">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="texto">“Explicaram todo o processo de forma clara e simples.”</p>
-                <span class="autor">— Sofia</span>
-            </div>
-
-            <div class="testemunho-card">
-                <div class="estrelas">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="texto">“Muito atenciosos e disponíveis.”</p>
-                <span class="autor">— Telma</span>
-            </div>
         </div>
+
     </section>
 
-</body>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<footer class="site-footer">
-    <div class="footer-container">
+    <section class="footer">
 
-        <div class="footer-col">
+        <div class="container">
+
             <h3>CONTACTOS</h3>
 
-            <div class="contact-text">
-                <h4>Email</h4>
-                <p>limpezaslsilva@gmail.com</p>
+            <div class="footer-contacts">
+
+                <div class="footer-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+351963457815">+351 963 457 815</a>
+                </div>
+
+                <div class="footer-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:limpezaslsilva@gmail.com">limpezaslsilva@gmail.com
+                    </a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/limpezas_lopes_da_silva/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
             </div>
 
-            <div class="contact-text">
-                <h4>Telemóvel</h4>
-                <p>+351 963 457 815</p>
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Lopes da Silva. Todos os direitos reservados.
+                </p>
+
             </div>
 
-            <div class="footer-socials">
-                <a href="https://www.instagram.com/limpezas_lopes_da_silva/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
         </div>
 
-    </div>
+    </section>
 
-    <div class="footer-bottom">
-        <p>Lopes da Silva © 2026. Todos os Direitos Reservados</p>
-        <p>Desenvolvido por <strong>João Doroteia</strong></p>
-    </div>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <script src="script.js"></script>
 
-</footer>
+</body>
 
 </html>

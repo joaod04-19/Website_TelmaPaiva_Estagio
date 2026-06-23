@@ -1,136 +1,147 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===================
-     ANIMAÇÃO AO SCROLL
-  ====================== */
-  const elementos = document.querySelectorAll('.animation');
+    /* ==========================
+        ANTES E DEPOIS (SLIDER)
+    ============================= */
+    const sliders = document.querySelectorAll('.before-after-card');
 
-  if (elementos.length > 0) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('ativo');
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
+    sliders.forEach(slider => {
+        const afterImg = slider.querySelector('.image-after');
+        const line = slider.querySelector('.slider-line');
+        const handle = slider.querySelector('.slider-handle');
 
-    elementos.forEach(el => observer.observe(el));
-  }
+        let isDragging = false;
 
+        const move = (x) => {
+            const rect = slider.getBoundingClientRect();
+            let position = x - rect.left;
 
-  /* ========================
-     ANTES E DEPOIS (SLIDER)
-  =========================== */
+            if (position < 0) position = 0;
+            if (position > rect.width) position = rect.width;
 
-  const sliders = document.querySelectorAll('.before-after');
+            const percent = (position / rect.width) * 100;
 
-  sliders.forEach(slider => {
-    const afterImg = slider.querySelector('.img-after');
-    const line = slider.querySelector('.slider-line');
-    const handle = slider.querySelector('.slider-handle');
+            afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;;
+            line.style.left = percent + "%";
+            handle.style.left = percent + "%";
+        };
 
-    let isDragging = false;
-
-    const move = (x) => {
-      const rect = slider.getBoundingClientRect();
-      let position = x - rect.left;
-
-      if (position < 0) position = 0;
-      if (position > rect.width) position = rect.width;
-
-      const percent = (position / rect.width) * 100;
-
-      afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;;
-      line.style.left = percent + "%";
-      handle.style.left = percent + "%";
-    };
-
-    slider.addEventListener('mousedown', () => isDragging = true);
-    window.addEventListener('mouseup', () => isDragging = false);
-    window.addEventListener('mousemove', (e) => {
-      if (isDragging) move(e.clientX);
-    });
-
-    slider.addEventListener('touchstart', () => isDragging = true);
-    window.addEventListener('touchend', () => isDragging = false);
-    window.addEventListener('touchmove', (e) => {
-      if (isDragging) move(e.touches[0].clientX);
-    });
-  });
-
-
-  /* ==========================
-     CAROUSEL (EFEITO NETFLIX)
-  ============================= */
-
-  const track = document.querySelector('.carousel-track');
-  const nextBtn = document.querySelector('.next');
-  const prevBtn = document.querySelector('.prev');
-
-  let index = 0;
-  const cardWidth = 380; // largura + gap
-
-  nextBtn.addEventListener('click', () => {
-    index++;
-    track.style.transform = `translateX(-${index * cardWidth}px)`;
-
-    // LOOP
-    if (index >= track.children.length - 3) {
-      setTimeout(() => {
-        track.appendChild(track.children[0]);
-        track.style.transition = "none";
-        track.style.transform = `translateX(-${(index - 1) * cardWidth}px)`;
-        index--;
-        setTimeout(() => {
-          track.style.transition = "transform 0.5s ease";
+        slider.addEventListener('mousedown', () => isDragging = true);
+        window.addEventListener('mouseup', () => isDragging = false);
+        window.addEventListener('mousemove', (e) => {
+            if (isDragging) move(e.clientX);
         });
-      }, 500);
-    }
-  });
 
-  prevBtn.addEventListener('click', () => {
-    if (index > 0) {
-      index--;
-      track.style.transform = `translateX(-${index * cardWidth}px)`;
+        slider.addEventListener('touchstart', () => isDragging = true);
+        window.addEventListener('touchend', () => isDragging = false);
+        window.addEventListener('touchmove', (e) => {
+            if (isDragging) move(e.touches[0].clientX);
+        });
+    });
+
+
+    /* ============================
+        CARROSEL (EFEITO NETFLIX)
+    =============================== */
+    const track = document.querySelector('.before-after-track');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+
+    if (track && nextBtn && prevBtn) {
+
+        let index = 0;
+        const cardWidth = 380;
+
+        nextBtn.addEventListener('click', () => {
+
+            index++;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+
+            if (index >= track.children.length - 3) {
+
+                setTimeout(() => {
+
+                    track.appendChild(track.children[0]);
+
+                    track.style.transition = "none";
+                    track.style.transform =
+                        `translateX(-${(index - 1) * cardWidth}px)`;
+
+                    index--;
+
+                    setTimeout(() => {
+                        track.style.transition =
+                            "transform 0.5s ease";
+                    });
+
+                }, 500);
+            }
+
+        });
+
+        prevBtn.addEventListener('click', () => {
+
+            if (index > 0) {
+                index--;
+                track.style.transform =
+                    `translateX(-${index * cardWidth}px)`;
+            }
+
+        });
+
     }
-  });
+
+    prevBtn.addEventListener('click', () => {
+        if (index > 0) {
+            index--;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+    });
 
 });
+
 
 /* ===============================
-    FORMULÁRIO (PEDIR ORÇAMENTO)  
+    FORMULÁRIO (PEDIR ORÇAMENTO)
 ================================== */
 
-// efeito focus automático no clicar na label
-document.querySelectorAll('.form-group label').forEach(label => {
-  label.addEventListener('click', () => {
-    label.previousElementSibling.focus();
-  });
-});
+const form = document.querySelector('.form-budget');
 
-const form = document.querySelector('.form-orcamento');
+if (form) {
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+    form.addEventListener('submit', (e) => {
 
-  const nome = form.querySelector('input[type="text"]').value;
-  const contacto = form.querySelectorAll('input[type="text"]')[1].value;
-  const email = form.querySelector('input[type="email"]').value;
-  const servico = form.querySelector('select').value;
-  const mensagem = form.querySelector('textarea').value;
+        e.preventDefault();
 
-  const texto = `Olá, gostaria de pedir um orçamento:%0A%0A
-                Nome: ${nome}%0A
-                Contacto: ${contacto}%0A
-                Email: ${email}%0A
-                Serviço: ${servico}%0A
+        const nome = form.querySelector('input[name="name"]').value;
+        const contacto = form.querySelector('input[name="contact"]').value;
+        const email = form.querySelector('input[name="email"]').value;
+        const distrito = form.querySelector('input[name="district"]').value;
+        const concelho = form.querySelector('input[name="council"]').value;
+        const servico = form.querySelector('select[name="service"]').value;
+        const mensagem = form.querySelector('textarea[name="mensage"]').value;
+
+        const texto =
+            `Olá, gostaria de pedir um orçamento:
+
+                Nome: ${nome}
+                Contacto: ${contacto}
+                Email: ${email}
+
+                Distrito: ${distrito}
+                Concelho: ${concelho}
+
+                Serviço: ${servico}
+
                 Mensagem: ${mensagem}`;
 
-  const numero = "351963457815"; // 👉 mete aqui o número da Telma
+        const numero = "351963457815";
 
-  const url = `https://wa.me/${numero}?text=${texto}`;
+        const url =
+            `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
 
-  window.open(url, '_blank');
-});
+        window.open(url, '_blank');
+
+    });
+
+}
