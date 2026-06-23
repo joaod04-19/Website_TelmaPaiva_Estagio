@@ -6,6 +6,17 @@ Este projeto consiste no desenvolvimento de um website institucional para aprese
 O website foi desenvolvido no âmbito de um estágio curricular e tem como objetivo disponibilizar informação clara sobre os serviços prestados e facilitar o contacto com clientes.
 
 
+# Funcionalidades
+. Design Responsivo para Desktop, Tablet e Smartphone;
+. Navegação Simples e Intuitiva;
+. Integração com WhatsApp para Pedido de Orçamento;
+. Apresentação dos Serviços Disponíveis;
+. Formulário de Pedido de Orçamento;
+. Testemunhos de Clientes;
+. Interface Moderna e Profissional;
+. Integração com Redes Sociais.
+
+
 # Tecnologias Utilizadas
 . HTML;
 
@@ -14,10 +25,15 @@ O website foi desenvolvido no âmbito de um estágio curricular e tem como objet
 . JavaScript;
 
 
+# Bibliotecas Utilizadas
+. Font Awesome (Ícones);
+
+
 # Estrutura do Website
 O website é composto pelas seguintes páginas:
 
-. Home (index.html) – página principal do website;
+### Home (index.html) – Página Principal do Website
+
 
 . Sobre (sobre.html) – página onde o cliente pode saber mais sobre a nossa empresa;
 
