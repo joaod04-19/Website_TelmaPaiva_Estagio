@@ -6,7 +6,7 @@ Este projeto consiste no desenvolvimento de um website institucional para aprese
 O website foi desenvolvido no âmbito de um estágio curricular e tem como objetivo disponibilizar informação clara sobre os serviços prestados e facilitar o contacto com clientes.
 
 
-# Funcionalidades
+## Funcionalidades
 . Design Responsivo para Desktop, Tablet e Smartphone;
 . Navegação Simples e Intuitiva;
 . Integração com WhatsApp para Pedido de Orçamento;
